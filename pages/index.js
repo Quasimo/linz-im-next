@@ -1,17 +1,28 @@
-import Head from 'next/head'
+import Head from 'next/head';
+
+
 
 const site = {
+  wallet: '0x3e6d9ea1259b3ae6fc9c4df62369262ff6026e37',
   title: 'Lin Zhizhao',
   subTitle: '隐藏人物睡不着',
   description: '日常互联网发现，随缘摄影分享',
   email: 'quasimo@qq.com',
 };
 
+const avatar = `https://web3-images-api.kibalabs.com/v1/accounts/${site.wallet}/image`;
+
 function mailTo(site) {
   return 'mailto:' + site.email
 }
 
+// const doServerSideStuff = () => {
+//   let zhihu = require('zhihu');
+//   let username = 'linz';
+// }
+
 export default function Home() {
+  
   return (
     <div className="container">
       <Head>
@@ -20,6 +31,7 @@ export default function Home() {
       </Head>
 
       <main>
+        <img alt={site.title} src={avatar} width="160" height="auto" className="mb-3 rounded" />
         <h1 className="title">
         {site.title}
         </h1>
@@ -34,6 +46,7 @@ export default function Home() {
             {site.email}
           </a>
         </div>
+        {site.email}
       </main>
 
       <footer>
@@ -168,6 +181,14 @@ export default function Home() {
 
         .logo {
           height: 1em;
+        }
+
+        .mb-3 {
+          margin-bottom: 3rem
+        }
+
+        .rounded {
+          border-radius: 10px
         }
 
         @media (max-width: 600px) {
