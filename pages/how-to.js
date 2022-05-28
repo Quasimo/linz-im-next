@@ -27,7 +27,7 @@ function HowTo() {
               <li>登录 Github;</li>
               <li>Fork <a target="_blank" href="https://github.com/Quasimo/linz-im-next">Quasimo/linz-im-next</a> 到你的仓库;</li>
               <li><code>git clone</code> 你仓库里的 <code>linz-im-next</code> 这个项目;</li>
-              <li>修改这个文件：<code>.env.local</code>;</li>
+              <li>修改这个文件：<code>.env.local</code> 和 <code>.env</code>;</li>
               <li><code>git add</code> => <code>git commit</code> => <code>git push</code>。</li>
             </ul>            
           </div>
@@ -59,7 +59,7 @@ function HowTo() {
             <p>在 ENS 注册域名需要用 ETH 支付。</p>
             <h4>ETH 购买渠道：</h4>
             <ul>
-              <li><a target="_blank" href="https://localcryptos.com/"><strong>LocalCryptos</strong>(<small>localcryptos.com</small>)</a></li>
+              <li><a target="_blank" href="https://localcryptos.com/r/linuximo"><strong>LocalCryptos</strong>(<small>localcryptos.com</small>)</a></li>
             </ul>
           </div>
         </div>
