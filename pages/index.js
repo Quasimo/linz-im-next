@@ -1,19 +1,16 @@
 import Head from 'next/head';
+import Footer from '../components/footer'
 
+export async function getStaticProps() {
+  return { props: {} }
+}
 
+const avatar = `https://web3-images-api.kibalabs.com/v1/accounts/${process.env.WALLET}/image`;
 
-const site = {
-  wallet: '0x3e6d9ea1259b3ae6fc9c4df62369262ff6026e37',
-  title: 'Lin Zhizhao',
-  subTitle: '隐藏人物睡不着',
-  description: '日常互联网发现，随缘摄影分享',
-  email: 'quasimo@qq.com',
-};
+const email = process.env.EMAIL;
 
-const avatar = `https://web3-images-api.kibalabs.com/v1/accounts/${site.wallet}/image`;
-
-function mailTo(site) {
-  return 'mailto:' + site.email
+function mailTo(email) {
+  return 'mailto:' + email
 }
 
 // const doServerSideStuff = () => {
@@ -26,39 +23,29 @@ export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>{site.subTitle}_{site.title}_{site.description}</title>
+        <title>{process.env.SUBTITLE}_{process.env.TITLE}_{process.env.DESCRIPTION}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        <img alt={site.title} src={avatar} width="160" height="auto" className="mb-3 rounded" />
+        <img alt={process.env.TITLE} src={avatar} width="160" height="auto" className="mb-3 rounded" />
         <h1 className="title">
-        {site.title}
+        {process.env.TITLE}
         </h1>
-        <h2>{site.subTitle}</h2>
+        <h2>{process.env.SUBTITLE}</h2>
 
         <p className="description">
-          {site.description}
+        {process.env.DESCRIPTION}
         </p>
-
         <div className="grid">
-          <a href={mailTo(site)} className="card">
-            {site.email}
+          <a href={mailTo(email)} className="card">
+          {process.env.EMAIL}
           </a>
         </div>
-        {site.email}
+        
       </main>
 
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className="logo" />
-        </a>
-      </footer>
+      <Footer />
 
       <style jsx>{`
         .container {
@@ -75,25 +62,6 @@ export default function Home() {
           flex: 1;
           display: flex;
           flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer img {
-          margin-left: 0.5rem;
-        }
-
-        footer a {
-          display: flex;
           justify-content: center;
           align-items: center;
         }
