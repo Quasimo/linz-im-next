@@ -27,7 +27,7 @@ function HowTo() {
               <li>登录 Github;</li>
               <li>Fork <a target="_blank" href="https://github.com/Quasimo/linz-im-next">Quasimo/linz-im-next</a> 到你的仓库;</li>
               <li><code>git clone</code> 你仓库里的 <code>linz-im-next</code> 这个项目;</li>
-              <li>修改这个文件：<code>.env.local</code> 和 <code>.env</code>;</li>
+              <li>修改这个文件：<code>config.js</code>;</li>
               <li><code>git add</code> => <code>git commit</code> => <code>git push</code>。</li>
             </ul>            
           </div>
