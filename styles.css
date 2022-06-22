@@ -1,0 +1,34 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.avatar {
+  margin-top: 1rem;
+}
+.rounded {
+  border-radius: 1rem
+}
+
+.home header h1 {
+  margin-bottom: 0;
+}
+
+.home main h2 {
+  font-size: 1.1rem;
+}
+
+.home .card {
+  opacity: 0.75;
+}
+.home .card:hover {
+  opacity: 1;
+}
