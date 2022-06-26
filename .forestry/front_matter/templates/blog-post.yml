@@ -12,4 +12,5 @@ fields:
       format: markdown
   label: text
 pages:
+- test content/hello.test.md
 - test content/test.test.md
