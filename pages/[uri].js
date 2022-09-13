@@ -24,7 +24,7 @@ export default function SlugPage({ post }) {
             </article>
       </main>
 
-      <Footer></Footer>
+      <Footer />
 
       <style jsx>{`
         .container {
