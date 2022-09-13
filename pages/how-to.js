@@ -7,12 +7,12 @@ const page = {
   title: "如何用 Fleek 在 IPFS 上托管个人主页"
 }
 
-const email = process.env.EMAIL;
+const email = process.env.NEXT_PUBLIC_EMAIL;
 function HowTo() {
   return (
     <div className="container">
       <Head>
-        <title>{page.title}_{process.env.TITLE}</title>
+        <title>{page.title}_{process.env.NEXT_PUBLIC_TITLE}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
